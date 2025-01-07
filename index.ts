@@ -1,5 +1,5 @@
 import Fastify from 'fastify';
-import { AuthProviderFactory } from './src/Providers/AuthProviderFactory';
+import { AuthProviderFactory } from './src/Factories/AuthProviderFactory';
 import { config } from 'dotenv';
 import { randomBytes } from 'crypto';
 

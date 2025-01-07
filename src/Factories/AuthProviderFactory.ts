@@ -43,7 +43,7 @@ export class AuthProviderFactory {
      * @returns - The provider class.
      */
     static async getProviderClass(provider: string) {
-        const providerClass = await import(`./${capitalize(provider)}AuthProvider`);
+        const providerClass = await import(`../Providers/${capitalize(provider)}AuthProvider`);
 
         return providerClass.default;
     }

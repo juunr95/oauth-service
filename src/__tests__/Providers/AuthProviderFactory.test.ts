@@ -1,5 +1,5 @@
 import { ProviderNotFoundException } from "../../Exceptions/ProviderNotFoundException";
-import { AuthProviderFactory } from "../../Providers/AuthProviderFactory";
+import { AuthProviderFactory } from "../../Factories/AuthProviderFactory";
 
 describe('AuthFactoryProvider', () => {
     it('should be able to authenticate with Google', async () => {
