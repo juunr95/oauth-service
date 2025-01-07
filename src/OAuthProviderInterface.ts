@@ -1,3 +1,6 @@
+/**
+ * The AuthenticatedUser interface.
+ */
 type AuthenticatedUser = {
     id: string;
     email: string;
@@ -5,12 +8,18 @@ type AuthenticatedUser = {
     picture: string;
 }
 
+/**
+ * The OAuthProviderCredentials interface.
+ */
 type OAuthProviderCredentials = {
     client_id: string;
     client_secret: string;
     redirect_uri: string;
 }
 
+/**
+ * The AuthorizationResponseType interface.
+ */
 type AuthorizationResponseType = {
     access_token: string;
     token_type: string;
@@ -19,6 +28,9 @@ type AuthorizationResponseType = {
     scope: string;
 }
 
+/**
+ * The OAuthProvider interface.
+ */
 interface OAuthProvider {
     /**
      * Generate the login URL for the provider.

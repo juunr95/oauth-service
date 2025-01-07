@@ -1,7 +1,7 @@
 import { OAuthConfigutationInterface } from "../OAuthConfigurationInterface";
 
 /**
- * Configuration for the Google OAuth provider.
+ * Configuration for the Git OAuth provider.
  */
 class GitAuthConfiguration implements OAuthConfigutationInterface {
     /**

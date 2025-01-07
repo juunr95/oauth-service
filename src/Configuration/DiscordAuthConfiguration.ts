@@ -1,9 +1,9 @@
 import { OAuthConfigutationInterface } from "../OAuthConfigurationInterface";
 
 /**
- * Configuration for the Google OAuth provider.
+ * Configuration for the Discord OAuth provider.
  */
-class GoogleAuthConfiguration implements OAuthConfigutationInterface {
+class DiscordAuthProvider implements OAuthConfigutationInterface {
     /**
      * @inheritdoc
      */
@@ -35,4 +35,4 @@ class GoogleAuthConfiguration implements OAuthConfigutationInterface {
     }   
 }
 
-export default GoogleAuthConfiguration;
+export default DiscordAuthProvider;

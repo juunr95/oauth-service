@@ -3,6 +3,9 @@ import { OAuthConfigutationInterface } from "../OAuthConfigurationInterface";
 import { OAuthProvider, AuthenticatedUser, OAuthProviderCredentials, AuthorizationResponseType } from "../OAuthProviderInterface";
 import { stringify } from 'querystring';
 
+/**
+ * The GitAuthProvider class.
+ */
 class GitAuthProvider implements OAuthProvider {
     /**
      * Credentials for the provider.
