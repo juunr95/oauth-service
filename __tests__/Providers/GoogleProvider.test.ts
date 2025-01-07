@@ -1,5 +1,5 @@
-import GoogleAuthConfiguration from "../../Configuration/GoogleAuthConfiguration";
-import GoogleAuthProvider from "../../Providers/GoogleAuthProvider";
+import GoogleAuthConfiguration from "../../src/Configuration/GoogleAuthConfiguration";
+import GoogleAuthProvider from "../../src/Providers/GoogleAuthProvider";
 
 describe('GoogleProvider', () => {
     it('should be able to authenticate with Google', () => {

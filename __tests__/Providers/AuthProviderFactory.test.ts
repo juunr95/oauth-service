@@ -1,5 +1,5 @@
-import { ProviderNotFoundException } from "../../Exceptions/ProviderNotFoundException";
-import { AuthProviderFactory } from "../../Factories/AuthProviderFactory";
+import { ProviderNotFoundException } from "../../src/Exceptions/ProviderNotFoundException";
+import { AuthProviderFactory } from "../../src/Factories/AuthProviderFactory";
 
 describe('AuthFactoryProvider', () => {
     it('should be able to authenticate with Google', async () => {
@@ -21,7 +21,7 @@ describe('AuthFactoryProvider', () => {
         expect(url).toBe('https://accounts.google.com/o/oauth2/auth?client_id=google-client-id&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fcallback&response_type=code&access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile');
     });
 
-    it('should be able to authenticate with Facebook', async () => {
+    it('should not be able to authenticate with unexistent provider', async () => {
         try {
             await AuthProviderFactory.create('facebook');
         } catch (err) {
