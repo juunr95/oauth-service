@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: auth-app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      # These environment variables can be used by your Node.js app
+      # to connect to the database
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: auth
+      DB_PASSWORD: password
+      DB_NAME: auth
+    networks:
+      - app-network
+
+  db:
+    image: mariadb:10.5
+    container_name: auth-database
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: password
+      MARIADB_DATABASE: auth
+      MARIADB_USER: auth
+      MARIADB_PASSWORD: password
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-network
+
+volumes:
+  db_data:
+
+networks:
+  app-network:
+    driver: bridge
